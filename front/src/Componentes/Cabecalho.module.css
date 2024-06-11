@@ -1,0 +1,42 @@
+.conteiner{
+    background-color: var(--cinza-medio);
+    display: flex;
+    justify-content: left;
+    align-items: center;
+    padding: 1rem;
+}
+
+.conteiner h1{
+    color: #E1E1E6;
+    font-size: 20px;
+    font-weight: bold;
+    margin-left: 8.125rem;
+}
+
+.subConteiner{
+    display: flex;
+    margin-right: 3.125rem;
+    justify-content: center;
+    align-items: center;
+}
+
+a{
+    color: #E1E1E6;
+    font-weight: bold;
+    cursor: pointer;
+    transition: color 0.3s;
+    text-decoration: none;
+}
+
+a:hover{
+    color: var(--roxo-claro);
+}
+
+.subConteiner img{
+    margin-right: 0.5rem;
+}
+
+.textConteiner{
+    margin-left: 20%;
+    display: flex;
+}

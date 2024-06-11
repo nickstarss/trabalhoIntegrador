@@ -1,0 +1,21 @@
+.formulario{
+    padding: 2rem;
+    background-color: var(--cinza-medio);
+    border-radius: 8px;
+    display: flex;
+    flex-direction: column;
+}
+
+label{
+    color: var(--cinza-claro);
+    margin-bottom: 10px;
+}
+
+.formulario input, select{
+    margin-bottom: 1rem;
+    border: none;
+    padding: 8px;
+    background-color: #56565F;
+    border-radius: 8px;
+    color: var(--cinza-claro);
+}

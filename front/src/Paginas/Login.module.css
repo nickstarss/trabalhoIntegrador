@@ -1,0 +1,99 @@
+body{
+    background-color: #121214;
+}
+
+.conteiner {
+    display: flex;
+    flex-direction: column;
+    height: calc(100vh - 50px);
+    justify-content: center;
+    align-items: center;
+}
+
+
+.titulo{
+    display: flex;
+    margin-top: 80px;
+}
+
+.titulo1{
+    color: #E1E1E6;
+    font-weight: 300;
+}
+
+.titulo2{
+    color: #9733EA;
+    margin-left: 6px;
+}
+
+.formulario {
+    display: flex;
+    flex-direction: column;
+    margin-top: 52px;
+}
+
+.textoInput{
+    color: #E1E1E6;
+    font-size: 1rem;
+    margin-right: 24vw;
+    margin-bottom: 1rem;
+}
+
+.icone{
+    width: 20px;
+    position: absolute;
+    left: 10px;
+    pointer-events: none;
+}
+
+.inputWrapper{
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+
+.campo {
+    padding: 15px;
+}
+
+.campo{
+    padding-left: 40px;
+    width: 100%;
+    font-size: 14px;
+    background-color: #202024;
+    border: none;
+    border-radius: 8px;
+    color: #9733EA;
+}
+
+.senha{
+    margin-top: 2rem;
+    color: #E1E1E6;
+    font-size: 1rem;
+    margin-right: 24vw;
+    margin-bottom: 1rem;
+}
+
+.botao{
+    margin-top: 2rem;
+    padding: 15px;
+    font-weight: bold;
+    border-radius: 8px;
+    border: none;
+    background-color: #9733EA;
+    color: white;
+    transition: background-color 0.3s;
+}
+
+.botao:hover{
+    background-color: #b55bff;
+    cursor: pointer;
+}
+
+.mensagem {
+    font-size: .9rem;
+    font-weight: 600;
+    margin-top: 0.5rem;  
+    color: red;
+}
+
