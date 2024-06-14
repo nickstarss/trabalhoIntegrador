@@ -1,0 +1,41 @@
+.formulario{
+    display: flex;
+    flex-direction: column;
+    background-color: var(--cinza-medio);
+    padding: 2rem;
+    border-radius: 8px;
+    margin-top: 1rem;
+}
+
+.formulario input{
+    margin-top: 1rem;
+    margin-bottom: 2rem;
+    background-color: #34343D;
+    border: none;
+    color: var(--cinza-claro);
+    padding: 0.5rem;
+    border-radius: 8px;
+    font-size: 16px;
+}
+
+.campoCheckbox input{
+    margin-left: 0.5rem;
+}
+
+.formulario button{
+    margin-top: 2rem;
+    width: 100%;
+    padding: 0.5rem;
+    background-color: var(--roxo-claro);
+    border: none;
+    font-weight: bold;
+    font-size: 20px;
+    color: var(--cinza-claro);
+    border-radius: 8px;
+    transition: 0.3s;
+}
+
+.formulario button:hover{
+    background-color: #b55bff;
+    cursor: pointer;
+}

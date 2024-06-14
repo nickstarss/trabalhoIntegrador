@@ -1,5 +1,5 @@
 import estilos from './Main.module.css'
-import { Localizacao } from '../Paginas/Localizacao';
+import { MapaInitial } from '../Paginas/MapaInitial';
 
 export function Main(){
     var dateString = new Date().toLocaleTimeString({timeZone: "America/Sao_Paulo"});
@@ -28,7 +28,7 @@ export function Main(){
                 </div>
             </div>
 
-            <Localizacao />
+            <MapaInitial />
         </>
     )
 }

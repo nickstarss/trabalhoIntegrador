@@ -3,6 +3,7 @@ import clock from '../assets/Clock.svg';
 import sensores from '../assets/Broadcast.svg';
 import mapa from '../assets/Map.svg';
 import mais from '../assets/Plus.svg';
+import filtro from '../assets/Funnel.svg';
 
 import { Link } from 'react-router-dom';
 
@@ -24,14 +25,14 @@ export function Cabecalho() {
                     <span>Mapa</span>
                 </Link>
 
-                <Link className={estilos.subConteiner} to='/inicial'>
-                    <img src={clock} alt="Histórico"/>
-                    <span>Histórico</span>
-                </Link>
-
-                <Link className={estilos.subConteiner} to='/inicial'>
+                <Link className={estilos.subConteiner} to='/inicial/cadsensor'>
                     <img src={mais} alt="Registrar"/>
                     <span>Registrar</span>
+                </Link>
+
+                <Link className={estilos.subConteiner} to='/inicial/filtro'>
+                    <img src={filtro} alt="Filtro"/>
+                    <span>Filtro</span>
                 </Link>
             </div>
         </header>

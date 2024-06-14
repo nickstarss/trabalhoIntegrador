@@ -2,6 +2,8 @@ import React, { useEffect, useState } from 'react';
 import axios from 'axios';
 import Mapa from '../Componentes/Mapa';
 import estilos from './Localizacao.module.css'
+import {Sensor} from './Sensor'
+import { Link } from 'react-router-dom';
 
 export function Localizacao() {
     const [pontos, setPontos] = useState([]);
@@ -29,6 +31,7 @@ export function Localizacao() {
                 setLoading(false);
             } catch (err) {
                 setError(err);
+                console.log(err);
                 setLoading(false);
             }
         }
@@ -45,10 +48,14 @@ export function Localizacao() {
     }
 
     return (
-        <div>
-            <h1 className={estilos.titulo}>Mapa de sensores
-            </h1>
-            <Mapa pontos={pontos} />
-        </div>
+        <>
+            <div className={estilos.mapa}>
+                <h1 className={estilos.titulo}>Mapa de sensores
+                </h1>
+                <Mapa pontos={pontos} />
+            </div>
+            <Sensor/>
+        </>
+
     );
 }

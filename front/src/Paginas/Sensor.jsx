@@ -60,7 +60,7 @@ export function Sensor() {
                         <p>Tipo: {sensor.tipo}</p>
                         <p>Localização: {sensor.localizacao}</p>
 
-                        <Link to={`alterar-sensor/${sensor.id}`} className={estilos.button}>Visualizar</Link>
+                        <Link to={`/inicial/visualizar-sensor/${sensor.id}`} className={estilos.button}>Visualizar</Link>
                         <Link to={`/inicial/alterar-sensor/${sensor.id}`} className={estilos.button}>Alterar</Link>
                     </div>
                 ))}

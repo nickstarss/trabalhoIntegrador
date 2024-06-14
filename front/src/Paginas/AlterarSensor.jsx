@@ -60,58 +60,68 @@ export function AlterarSensor() {
                 }
             });
             alert('Sensor alterado com sucesso!');
-            navigate('/inicial');
+            navigate('/inicial/visusensor');
         } catch (error) {
             console.error('Erro ao alterar o sensor', error);
         }
     };
 
     return (
-        <div className={estilos.conteiner}>
-            <form className={estilos.formulario} onSubmit={handleSubmit(onSubmit)}>
-                <label>Tipo</label>
-                <select {...register('tipo')} className={estilos.campo}>
-                    <option value="">Selecione o tipo de sensor</option>
-                    <option value="Temperatura">Temperatura</option>
-                    <option value="Contador">Contador</option>
-                    <option value="Luminosidade">Luminosidade</option>
-                    <option value="Umidade">Umidade</option>
-                </select>
-                {errors.tipo && <p className={estilos.mensagem}>{errors.tipo.message}</p>}
+        <>
+            <h1 className={estilos.titulo}>Alterar sensor</h1>
+            <div className={estilos.conteiner}>
+                <form className={estilos.formulario} onSubmit={handleSubmit(onSubmit)}>
+                    <div className={estilos.subconteiner1}>
+                        <label>Tipo</label>
+                        <select {...register('tipo')} className={estilos.campo}>
+                            <option value="">Selecione o tipo de sensor</option>
+                            <option value="Temperatura">Temperatura</option>
+                            <option value="Contador">Contador</option>
+                            <option value="Luminosidade">Luminosidade</option>
+                            <option value="Umidade">Umidade</option>
+                        </select>
+                        {errors.tipo && <p className={estilos.mensagem}>{errors.tipo.message}</p>}
 
-                <label>Mac Address</label>
-                <input {...register('mac_address')} className={estilos.campo} />
-                {errors.mac_address && <p className={estilos.mensagem}>{errors.mac_address.message}</p>}
+                        <label>Mac Address</label>
+                        <input {...register('mac_address')} className={estilos.campo} />
+                        {errors.mac_address && <p className={estilos.mensagem}>{errors.mac_address.message}</p>}
 
-                <label>Latitude</label>
-                <input {...register('latitude')} className={estilos.campo} />
-                {errors.latitude && <p className={estilos.mensagem}>{errors.latitude.message}</p>}
+                        <label>Latitude</label>
+                        <input {...register('latitude')} className={estilos.campo} />
+                        {errors.latitude && <p className={estilos.mensagem}>{errors.latitude.message}</p>}
 
-                <label>Longitude</label>
-                <input {...register('longitude')} className={estilos.campo} />
-                {errors.longitude && <p className={estilos.mensagem}>{errors.longitude.message}</p>}
+                        <label>Longitude</label>
+                        <input {...register('longitude')} className={estilos.campo} />
+                        {errors.longitude && <p className={estilos.mensagem}>{errors.longitude.message}</p>}
 
-                <label>Localização</label>
-                <input {...register('localizacao')} className={estilos.campo} />
-                {errors.localizacao && <p className={estilos.mensagem}>{errors.localizacao.message}</p>}
+                        <label>Localização</label>
+                        <input {...register('localizacao')} className={estilos.campo} />
+                        {errors.localizacao && <p className={estilos.mensagem}>{errors.localizacao.message}</p>}
+                    </div>
 
-                <label>Responsável</label>
-                <input {...register('responsavel')} className={estilos.campo} />
-                {errors.responsavel && <p className={estilos.mensagem}>{errors.responsavel.message}</p>}
+                    <div className={estilos.subconteiner2}>
+                        <label>Responsável</label>
+                        <input {...register('responsavel')} className={estilos.campo} />
+                        {errors.responsavel && <p className={estilos.mensagem}>{errors.responsavel.message}</p>}
 
-                <label>Unidade Medida</label>
-                <input {...register('unidade_medida')} className={estilos.campo} />
-                {errors.unidade_medida && <p className={estilos.mensagem}>{errors.unidade_medida.message}</p>}
+                        <label>Unidade Medida</label>
+                        <input {...register('unidade_medida')} className={estilos.campo} />
+                        {errors.unidade_medida && <p className={estilos.mensagem}>{errors.unidade_medida.message}</p>}
 
-                <label>Status Operacional</label>
-                <input {...register('status_operacional')} type="checkbox" />
-                
-                <label>Observação</label>
-                <textarea {...register('observacao')} className={estilos.campo}></textarea>
-                {errors.observacao && <p className={estilos.mensagem}>{errors.observacao.message}</p>}
+                        
+                        <label>Observação</label>
+                        <textarea {...register('observacao')} className={estilos.campo}></textarea>
+                        {errors.observacao && <p className={estilos.mensagem}>{errors.observacao.message}</p>}
+                        
+                        <div>
+                            <input {...register('status_operacional')} type="checkbox" className={estilos.checkbox}/>
+                            <label>Status Operacional</label>
+                        </div>
 
-                <button type="submit" className={estilos.botao}>Salvar Alterações</button>
-            </form>
-        </div>
+                        <button type="submit" className={estilos.botao}>Salvar</button>
+                    </div>
+                </form>
+            </div>
+        </>
     );
 }

@@ -1,0 +1,39 @@
+.conteiner{
+    background-color: var(--cinza-medio);
+    display: flex;
+    padding: 2rem;
+    border-radius: 8px;
+}
+
+.subconteiner1{
+    width: 100%;
+    flex: 1;
+}
+
+.info{
+    margin-top: 1rem;
+    margin-bottom: 2rem;
+}
+
+.titulo{
+    margin-bottom: 1rem;
+}
+
+.voltar{
+    display: flex;
+    justify-content:end;
+    align-items: center;
+    margin-top: 1rem;
+}
+
+.voltar span{
+    font-size: 20px;
+    font-weight: bold;
+    margin-left: 0.5rem;
+    transition: color 0.3s;
+    cursor: pointer;
+}
+
+.voltar span:hover{
+    color: var(--roxo-claro);
+}

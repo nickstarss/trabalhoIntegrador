@@ -47,33 +47,50 @@ export function Filtro() {
     return (
         <div className={estilos.container}>
             <form onSubmit={handleSubmit} className={estilos.formulario}>
+                <div className={estilos.container1}>
+                    <div>
+                        <label>Responsável</label>
+                        <input type="text" name="responsavel" value={filters.responsavel} onChange={handleChange} className={estilos.input} />
+                    </div>
 
-                    <label>Responsável</label>
-                    <input type="text" name="responsavel" value={filters.responsavel} onChange={handleChange} />
+                    <div className={estilos.operacional}>
+                        <label>Status Operacional *</label>
+                        <input type="checkbox" name="status_operacional" checked={filters.status_operacional} onChange={handleChange} /> 
+                    </div>
+                </div>
 
-                    <label>Status Operacional *</label>
-                    <input type="checkbox" name="status_operacional" checked={filters.status_operacional} onChange={handleChange} />
+                <div className={estilos.container2}>
+                    <div>
+                        <label>Tipo</label>
+                        <input type="text" name="tipo" value={filters.tipo} onChange={handleChange} className={estilos.input}/>
+                    </div>
 
-                    <label>Tipo</label>
-                    <input type="text" name="tipo" value={filters.tipo} onChange={handleChange} />
+                    <div className={estilos.localizacao}>
+                        <label>Localização</label>
+                        <input type="text" name="localizacao" value={filters.localizacao} onChange={handleChange} className={estilos.input} />
+                    </div>
+                    <button className={estilos.botao} type="submit">Filtrar</button>
+                </div>
 
-                    <label>Localização</label>
-                    <input type="text" name="localizacao" value={filters.localizacao} onChange={handleChange} />
-
-                <button className={estilos.botao} type="submit">Filtrar</button>
             </form>
+
+            <div className={estilos.conteiner}>
+                <h1>Sensores Filtrados</h1>
+                <div className={estilos.sensorContainer}>
+                    {sensors.map((sensor) => (
+                    <div key={sensor.id} className={estilos.sensorCard}>
+                        <p><strong>Sensor {sensor.id}</strong></p>
+                        <p>{sensor.tipo}</p>
+                        <p>{sensor.localizacao}</p>
+                        <p>{sensor.responsavel}</p>
+                    </div>
+                    ))}
+                </div>
+            </div>
 
             {loading && <div className={estilos.conteiner}><h1>Carregando...</h1></div>}
             {error && <div className={estilos.conteiner}><h1>Erro ao buscar sensores: {error.message}</h1></div>}
 
-            <div className={estilos.conteiner}>
-                <h1>Sensores Filtrados</h1>
-                <ul>
-                    {sensors.map(sensor => (
-                        <li key={sensor.id}>{sensor.tipo} - {sensor.localizacao} - {sensor.responsavel}</li>
-                    ))}
-                </ul>
-            </div>
         </div>
     );
 };

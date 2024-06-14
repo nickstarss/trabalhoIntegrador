@@ -26,6 +26,7 @@ export function CadastrarSensor() {
     });
 
     async function obterDadosFormulario(data) {
+        console.log(data)
         try {
             const response = await axios.post('http://127.0.0.1:8000/api/sensores/', data, {
                 headers: {
@@ -42,7 +43,7 @@ export function CadastrarSensor() {
 
     return (
         <div className={estilos.conteiner}>
-            <p className={estilos.titulo}>Cadastro de Sensor</p>
+            <h1 className={estilos.titulo}>Cadastrar sensor</h1>
 
             <form className={estilos.formulario} onSubmit={handleSubmit(obterDadosFormulario)}>
                 <select {...register('tipo')} className={estilos.campo}>

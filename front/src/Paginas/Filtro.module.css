@@ -1,0 +1,66 @@
+.formulario{
+    background-color: var(--cinza-medio);
+    padding: 2rem;
+    display: flex;
+}
+
+.input{
+    width: 100%;
+    margin-top: 1rem;
+    padding: 0.5rem;
+    background-color: #34343D;
+    border: none;
+    border-radius: 8px;
+    color: var(--cinza-claro);
+}
+
+.container1{
+    margin-right: 2rem;
+}
+
+.operacional{
+    display: flex;
+    margin-top: 4.2rem;
+}
+
+.operacional input{
+    margin-left: 1rem;
+}
+
+.localizacao{
+    margin-top: 1rem;
+}
+
+.container2 button{
+    margin-top: 2rem;
+    width: 100%;
+    padding: 0.5rem;
+    background-color: var(--roxo-claro);
+    border: none;
+    font-weight: bold;
+    font-size: 20px;
+    color: var(--cinza-claro);
+    border-radius: 8px;
+}
+
+.sensorCard{
+    margin-bottom: 1rem;
+    padding: 1rem;
+    width: calc(33.33% - 20px); /* Distribui os sensores em 3 colunas */
+    align-items: center;
+    border-radius: 8px;
+    background-color: var(--cinza-medio);
+}
+
+.conteiner{
+    width: 100%;
+    margin-top: 2rem;
+}
+
+.sensorContainer {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px; /* Espaçamento entre os sensores */
+    margin-top: 1rem;
+    margin-top: 2rem;
+}

@@ -8,6 +8,7 @@ import { Localizacao } from '../Paginas/Localizacao';
 import { Filtro } from '../Paginas/Filtro'; 
 import { AlterarSensor } from '../Paginas/AlterarSensor';
 import { Main } from '../Componentes/Main';
+import { VisuSensor } from '../Paginas/VisuSensor';
 
  export function Rotas() {
     return (
@@ -22,6 +23,7 @@ import { Main } from '../Componentes/Main';
                 <Route path='localizacao' element={ <Localizacao /> } />
                 <Route path='filtro' element={<Filtro />} />        
                 <Route path="alterar-sensor/:id" element={<AlterarSensor />} />
+                <Route path="visualizar-sensor/:id" element={<VisuSensor />} />
                 
             </Route>    
 

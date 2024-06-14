@@ -25,7 +25,7 @@ export function Lateral() {
 
             <footer>
                 <Link className={estilos.subConteiner} to='/inicial/cadsensor'>
-                    Editar seu perfil
+                    Encerrar sessão
                 </Link>
             </footer>
         </aside>
